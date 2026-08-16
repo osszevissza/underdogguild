@@ -871,6 +871,10 @@ a {
    --------------------------------------------------------- */
 
 @media (prefers-reduced-motion: no-preference) {
+    .site-header {
+        transition: transform 220ms ease;
+    }
+
     .btn,
     .project-card,
     .tool-plate,
@@ -911,6 +915,10 @@ a {
 
     .marquee {
         transform: none;
+    }
+
+    .site-header.is-hidden {
+        transform: translateY(-100%);
     }
 
     .hero__stamp {
