@@ -47,7 +47,7 @@ Várható befejezés: 2026. szeptember.
 
 ### KülönöS Klub
 
-*Hugo, kreatív játszótér*
+*Kreatív játszótér*
 
 Egy lovecrafti sci-fi horror szerepjáték-klub oldala mesélőkkel, kalandokkal és sötét történetekkel. Ez volt az első projektem, ezért nyomás nélkül, bátrabb dizájnt próbálhattam ki.
 
