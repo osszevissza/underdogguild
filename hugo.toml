@@ -7,5 +7,5 @@ unsafe = true
 hardWraps = true
 
 [params]
-description = "Egyedi, gyors és akadálymentes statikus weboldalak. Jelképes áron, portfólióért."
+description = "Egyedi, gyors és akadálymentes statikus weboldalak."
 email = "hello@barsimarina.hu"
