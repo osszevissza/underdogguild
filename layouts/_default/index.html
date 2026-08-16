@@ -1,0 +1,157 @@
+{{ define "main" }}
+<article>
+
+    <header class="hero">
+        <p class="hero__kicker">WEBFEJLESZTÉS · STATIKUS OLDALAK · HUGO</p>
+        <h1 class="hero__title">Honlapokat<br>tervezek.<br><span class="hero__title-highlight">Egyedieket.</span></h1>
+        <p class="hero__lead">
+            Gyors, akadálymentes és jópofa weboldalak kisvállalkozásoknak
+            és alapítványoknak. Most jelképes áron, mert a
+            portfólió bővítése a célom.
+        </p>
+        <div class="hero__actions">
+            <a href="#" class="btn btn--primary js-email" data-js-email>Írj nekem</a>
+            <a href="#portfolio" class="btn">Nézd meg a munkáimat</a>
+        </div>
+        <p class="hero__stamp" aria-hidden="true">NYITOTT ÚJ PROJEKTEKRE</p>
+    </header>
+
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+            <span class="marquee__item">HUGO</span>
+            <span class="marquee__item">TYPESCRIPT</span>
+            <span class="marquee__item">CSS</span>
+            <span class="marquee__item">PYTHON</span>
+            <span class="marquee__item">DJANGO</span>
+            <span class="marquee__item">FIGMA</span>
+            <span class="marquee__item">POSTGRESQL</span>
+            <span class="marquee__item">REACT</span>
+            <span class="marquee__item">HUGO</span>
+            <span class="marquee__item">TYPESCRIPT</span>
+            <span class="marquee__item">CSS</span>
+            <span class="marquee__item">PYTHON</span>
+            <span class="marquee__item">DJANGO</span>
+            <span class="marquee__item">FIGMA</span>
+            <span class="marquee__item">POSTGRESQL</span>
+            <span class="marquee__item">REACT</span>
+        </div>
+    </div>
+
+    <section id="portfolio" class="section">
+        <h2 class="section-title">
+            <span class="section-title__no">01</span>
+            Portfólió
+        </h2>
+        <p class="section-intro">Ami eddig elkészült, és ami éppen a műhelyben van.</p>
+
+        <div class="content">{{ .Content }}</div>
+    </section>
+
+    <section id="szolgaltatasok" class="section">
+        <h2 class="section-title">
+            <span class="section-title__no">02</span>
+            Szolgáltatások
+        </h2>
+        <p class="section-intro">Egy fős stúdió, teljes odafigyeléssel.</p>
+
+        <div class="services">
+            <article class="service-card">
+                <span class="service-card__no">01</span>
+                <h3>Statikus honlap</h3>
+                <p>Villámgyors, egyszerűen karbantartható oldal Hugoval. Pont annyi, amennyire szükséged van, semmi felesleges keretrendszer.</p>
+            </article>
+            <article class="service-card">
+                <span class="service-card__no">02</span>
+                <h3>Egyedi dizájn</h3>
+                <p>Nem sablonról beszélünk. A te arculatodhoz tervezek, nem a sablonbolt kínálatából válogatok.</p>
+            </article>
+            <article class="service-card">
+                <span class="service-card__no">03</span>
+                <h3>Akadálymentesség</h3>
+                <p>Billentyűzetről is használható, képernyőolvasókkal is olvasható. A web mindenkié. Ez nálam nem marketingfogás.</p>
+            </article>
+            <article class="service-card">
+                <span class="service-card__no">04</span>
+                <h3>Karbantartás</h3>
+                <p>Egyszerű adminfelületet adok, hogy magad is tudj frissíteni. Ha mégis elakadsz, ott vagyok.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="eszkoztar" class="section">
+        <h2 class="section-title">
+            <span class="section-title__no">03</span>
+            Eszköztár
+        </h2>
+        <p class="section-intro">Ami a polcon van, és ami éppen úton van.</p>
+
+        <ul class="tools">
+            <li class="tool-plate">Hugo</li>
+            <li class="tool-plate">HTML / CSS</li>
+            <li class="tool-plate">JavaScript</li>
+            <li class="tool-plate">TypeScript</li>
+            <li class="tool-plate">Python / Django</li>
+            <li class="tool-plate">PostgreSQL</li>
+            <li class="tool-plate">MSSQL</li>
+            <li class="tool-plate">Figma</li>
+            <li class="tool-plate">Affinity</li>
+            <li class="tool-plate">Power BI</li>
+            <li class="tool-plate tool-plate--hot">React <span>épp tanulom</span></li>
+        </ul>
+    </section>
+
+    <section id="arak" class="section">
+        <div class="price-tag">
+            <div class="price-tag__label">AKCIÓ, AMEDDIG PORTFÓLIÓT ÉPÍTEK</div>
+            <div class="price-tag__body">
+                <h2>Jelképes áron<br>dolgozom.</h2>
+                <p>
+                    Nem ez lesz az utolsó projektem, és ez az árazás sem örök életű,
+                    de most még tanulom, minden projekttel kicsit tovább jutva.
+                </p>
+                <a href="#" class="btn btn--primary js-email" data-js-email>Kérj árajánlatot</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="rolam" class="section">
+        <h2 class="section-title">
+            <span class="section-title__no">04</span>
+            Ki ez?
+        </h2>
+        <p class="section-intro">Egy ember. Marina. (A fantázianév csak a kedvenc bandámra utalás.)</p>
+
+        <div class="about">
+            <p>
+                Kommunikációt és közgazdaságot tanultam, majd évekig szerveztem a SzimplaCity
+                programjait, aztán vidékre, daruszervizbe sodort az élet.
+            </p>
+            <p>
+                Ma már Hugo-val és a jó öreg HTML/CSS-szel építek oldalakat, közben
+                Data Science mesterképzésre járok, és a TypeScriptet, meg a Reactet
+                tanulom. A következő állomás az MLOps kicsit alaposabban.
+            </p>
+            <p>
+                Nálam nincs marketingnyelv: ha valamit nem tudok, megmondom, és utánajárok.
+                Ha valamit megígértem, arra lehet számítani.
+            </p>
+        </div>
+    </section>
+
+    <section id="kapcsolat" class="section section--contact">
+        <h2 class="section-title">
+            <span class="section-title__no">05</span>
+            Írj nekem
+        </h2>
+        <p class="section-intro">
+            Ötleted van? Csak kérdeznél? Szólj, és megbeszéljük. Ingyen, természetesen.
+        </p>
+
+        <div class="contact">
+            <a href="#" class="btn btn--primary btn--big js-email" data-js-email>hello@barsimarina.hu</a>
+            <p class="contact__note">Válaszolok, amilyen gyorsan csak tudok.</p>
+        </div>
+    </section>
+
+</article>
+{{ end }}

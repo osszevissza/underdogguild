@@ -1,0 +1,12 @@
+# Hugo build output
+/public/
+/resources/_gen/
+
+# Hugo lock file
+.hugo_build.lock
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.directory
+*.swp

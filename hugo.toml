@@ -1,0 +1,11 @@
+baseURL = "/"
+languageCode = "hu"
+title = "Underdog Guild"
+
+[markup.goldmark.renderer]
+unsafe = true
+hardWraps = true
+
+[params]
+description = "Egyedi, gyors és akadálymentes statikus weboldalak. Jelképes áron, portfólióért."
+email = "hello@barsimarina.hu"
