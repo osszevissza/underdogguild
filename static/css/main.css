@@ -14,6 +14,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: clip;
 }
 
 body,
@@ -68,6 +69,7 @@ img {
 
 body {
     min-height: 100vh;
+    overflow-x: clip;
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.7;
@@ -907,10 +909,21 @@ a {
         order: 3;
     }
 
+    .marquee {
+        transform: none;
+    }
+
     .hero__stamp {
         position: static;
         margin-top: 2.5rem;
         transform: rotate(-3deg);
+    }
+
+    .stamp {
+        position: static;
+        align-self: flex-start;
+        margin-top: 1.25rem;
+        transform: rotate(-2deg);
     }
 
     .projects,
@@ -926,13 +939,67 @@ a {
         width: min(100% - 1.25rem, var(--page-width));
     }
 
-    .stamp {
-        position: static;
-        align-self: flex-start;
-        margin-top: 0.75rem;
+    .site-logo__mark {
+        width: 36px;
+        height: 36px;
+    }
+
+    .site-logo__name {
+        font-size: 1.15rem;
+    }
+
+    .hero__kicker {
+        font-size: 0.66rem;
+        letter-spacing: 0.1em;
+    }
+
+    .hero__title {
+        font-size: clamp(2.9rem, 13vw, 3.4rem);
+    }
+
+    .hero__actions {
+        flex-direction: column;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+    .section-title {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        font-size: clamp(1.9rem, 8.5vw, 2.4rem);
+    }
+
+    .section-title__no {
+        min-width: 2.8rem;
+        height: 2.8rem;
+        font-size: 1rem;
+        box-shadow: 3px 3px 0 var(--ink);
     }
 
     .project-card h3 {
         margin-top: 0.75rem;
+    }
+
+    .price-tag__label {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        line-height: 1.5;
+    }
+
+    .price-tag__body {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .btn--big {
+        min-height: 60px;
+        padding: 0.9rem 1.1rem;
+        font-size: 1.05rem;
+        box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .tools {
+        gap: 0.9rem;
     }
 }
