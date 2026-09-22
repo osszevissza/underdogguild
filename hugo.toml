@@ -30,3 +30,6 @@ weight = 2
 [languages.en.params]
 description = "Unique, fast and accessible static websites."
 ogLocale = "en_US"
+
+[languages.en.permalinks]
+werkblog = "/werkblog/:slug/"

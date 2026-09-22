@@ -51,12 +51,12 @@
                 <span class="site-logo__name">Underdog&nbsp;Guild</span>
                 <span class="site-logo__tag">{{ i18n "logo_tag" }}</span>
             </a>
-
+{{ $home := "" }}{{ if not .IsHome }}{{ $home = .Site.Home.RelPermalink }}{{ end }}
             <nav class="site-nav" aria-label="{{ i18n "nav_label" }}">
-                <a href="#portfolio">{{ i18n "nav_portfolio" }}</a>
-                <a href="#szolgaltatasok">{{ i18n "nav_services" }}</a>
-                <a href="#eszkoztar">{{ i18n "nav_tools" }}</a>
-                <a href="#kapcsolat">{{ i18n "nav_contact" }}</a>
+                <a href="{{ $home }}#portfolio">{{ i18n "nav_portfolio" }}</a>
+                <a href="{{ $home }}#szolgaltatasok">{{ i18n "nav_services" }}</a>
+                <a href="{{ $home }}#eszkoztar">{{ i18n "nav_tools" }}</a>
+                <a href="{{ $home }}#kapcsolat">{{ i18n "nav_contact" }}</a>
             </nav>
 
             {{ $current := .Site.Language.Lang }}
@@ -80,7 +80,7 @@
         </div>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
         {{ block "main" . }}{{ end }}
     </main>
 
@@ -89,9 +89,9 @@
         <div class="site-footer__inner">
             <p>{{ now.Year }} Underdog Guild</p>
             <p class="site-footer__note">
-                {{ i18n "footer_note" }} ·
+                {{ with .Site.GetPage "/werkblog" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a> · {{ end }}{{ i18n "footer_note" }} ·
                 <a href="{{ i18n "license_url" }}" target="_blank" rel="noopener noreferrer">
-                    CC0
+                    CC0<span class="visually-hidden"> ({{ i18n "opens_new_tab" }})</span>
                 </a>
             </p>
         </div>

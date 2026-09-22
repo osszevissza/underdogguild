@@ -18,7 +18,7 @@ This was my first job – and not a classic, market-optimised project but a foun
 
 The site also got a simple admin interface, so since handover (May 2026) the partner has been updating the content themselves. The current state partly reflects their work too.
 
-[View site →](https://hospicetatab.hu)
+<a href="https://hospicetatab.hu" aria-label="View site: Hospice Charity Foundation">View site →</a>
 
 </article>
 
@@ -51,7 +51,7 @@ Expected completion: September 2026.
 
 A Lovecraftian sci-fi horror RPG club site with game masters, adventures and dark stories. This was my first project, so I could try a bolder design without pressure.
 
-[View site →](https://klub-osszevissza.statichost.eu/)
+<a href="https://klub-osszevissza.statichost.eu/" aria-label="View site: KülönöS Klub">View site →</a>
 
 </article>
 

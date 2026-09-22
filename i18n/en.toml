@@ -10,6 +10,7 @@ nav_cta = "Get in touch"
 lang_label = "Language"
 footer_note = "Built with DeepSeek and plenty of coffee"
 license_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+opens_new_tab = "opens in a new tab"
 og_image_alt = "Underdog Guild – web studio logo"
 
 # Hero
@@ -59,3 +60,11 @@ about_p3 = "No marketing speak here: if I don't know something, I say so and loo
 contact_title = "Get in touch"
 contact_intro = "Got an idea? Just a question? Say hi and we'll talk it through. Free, of course."
 contact_note = "I reply as fast as I can."
+
+# Work
+werk_kicker = "WORK · LEARNING · THOUGHTS"
+werk_stamp = "FRESH FROM THE WORKSHOP"
+read_more = "Read it"
+werk_empty = "No posts yet. The first one is coming soon."
+back_to_werk = "Back to Werkblog"
+date_format = "January 2, 2006"

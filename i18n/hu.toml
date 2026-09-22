@@ -10,6 +10,7 @@ nav_cta = "Írj nekem"
 lang_label = "Nyelv"
 footer_note = "Készült DeepSeekkel és sok kávéval"
 license_url = "https://creativecommons.org/publicdomain/zero/1.0/deed.hu"
+opens_new_tab = "új lapon nyílik"
 og_image_alt = "Underdog Guild – webstúdió logó"
 
 # Hero
@@ -59,3 +60,11 @@ about_p3 = "Nálam nincs marketingnyelv: ha valamit nem tudok, megmondom és ut�
 contact_title = "Írj nekem"
 contact_intro = "Ötleted van? Csak kérdeznél? Szólj, és megbeszéljük. Ingyen, természetesen."
 contact_note = "Válaszolok, amilyen gyorsan csak tudok."
+
+# Werk
+werk_kicker = "MUNKA · TANULÁS · GONDOLATOK"
+werk_stamp = "FRISS A MŰHELYBŐL"
+read_more = "Elolvasom"
+werk_empty = "Még nincs bejegyzés. Az első mindjárt jön."
+back_to_werk = "Vissza a Werkbloghoz"
+date_format = "2006. 01. 02."

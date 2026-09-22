@@ -1,0 +1,18 @@
+{{ define "title" }}{{ .Title }} – {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<article class="post">
+
+    <header class="post-header">
+        <p class="post-header__date">{{ .Date.Format (i18n "date_format") }}</p>
+        <h1 class="post-header__title">{{ .Title }}</h1>
+    </header>
+
+    <div class="post-content">{{ .Content }}</div>
+
+    <footer class="post-footer">
+        <a class="btn" href="{{ .Parent.RelPermalink }}">← {{ i18n "back_to_werk" }}</a>
+    </footer>
+
+</article>
+{{ end }}

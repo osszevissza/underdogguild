@@ -18,7 +18,7 @@ Ez volt az első munkám – és nem egy klasszikus, piacra optimalizált projek
 
 Az oldalhoz egyszerű adminfelület is készült, így az átadás óta (2026. május) a partner maga frissíti a tartalmat. A mostani állapot így már részben az ő munkájukat is tükrözi.
 
-[Megtekintés →](https://hospicetatab.hu)
+<a href="https://hospicetatab.hu" aria-label="Megtekintés: Hospice Szeretetszolgálat Alapítvány">Megtekintés →</a>
 
 </article>
 
@@ -51,7 +51,7 @@ Várható befejezés: 2026. szeptember.
 
 Egy lovecrafti sci-fi horror szerepjáték-klub oldala mesélőkkel, kalandokkal és sötét történetekkel. Ez volt az első projektem, ezért nyomás nélkül, bátrabb dizájnt próbálhattam ki.
 
-[Megtekintés →](https://klub-osszevissza.statichost.eu/)
+<a href="https://klub-osszevissza.statichost.eu/" aria-label="Megtekintés: KülönöS Klub">Megtekintés →</a>
 
 </article>
 
