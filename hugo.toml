@@ -1,5 +1,5 @@
 baseURL = "https://barsimarina.hu/"
-languageCode = "hu"
+defaultContentLanguage = "hu"
 title = "Underdog Guild"
 
 [markup.goldmark.renderer]
@@ -7,5 +7,26 @@ unsafe = true
 hardWraps = true
 
 [params]
-description = "Egyedi, gyors és akadálymentes statikus weboldalak."
 email = "hello@barsimarina.hu"
+
+[languages]
+
+[languages.hu]
+languageCode = "hu"
+languageName = "Magyar"
+title = "Underdog Guild"
+weight = 1
+
+[languages.hu.params]
+description = "Egyedi, gyors és akadálymentes statikus weboldalak."
+ogLocale = "hu_HU"
+
+[languages.en]
+languageCode = "en"
+languageName = "English"
+title = "Underdog Guild"
+weight = 2
+
+[languages.en.params]
+description = "Unique, fast and accessible static websites."
+ogLocale = "en_US"

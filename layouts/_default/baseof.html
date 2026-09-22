@@ -17,14 +17,14 @@
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Underdog Guild">
-    <meta property="og:locale" content="hu_HU">
+    <meta property="og:locale" content="{{ .Site.Params.ogLocale }}">
     <meta property="og:title" content="{{ .Title }}">
     <meta property="og:description" content="{{ .Site.Params.description }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ "img/og.png" | absURL }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Underdog Guild – webstúdió logó">
+    <meta property="og:image:alt" content="{{ i18n "og_image_alt" }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Title }}">
@@ -39,7 +39,7 @@
 <body>
 
     <a href="#main-content" class="skip-link">
-        Ugrás a tartalomra
+        {{ i18n "skip_link" }}
     </a>
 
     <div class="hazard-bar" aria-hidden="true"></div>
@@ -49,17 +49,34 @@
             <a class="site-logo" href="#main-content">
                 <img class="site-logo__mark" src="/img/logo.svg" alt="" width="42" height="42">
                 <span class="site-logo__name">Underdog&nbsp;Guild</span>
-                <span class="site-logo__tag">WEBSTÚDIÓ</span>
+                <span class="site-logo__tag">{{ i18n "logo_tag" }}</span>
             </a>
 
-            <nav class="site-nav" aria-label="Fő navigáció">
-                <a href="#portfolio">Portfólió</a>
-                <a href="#szolgaltatasok">Szolgáltatások</a>
-                <a href="#eszkoztar">Eszköztár</a>
-                <a href="#kapcsolat">Kapcsolat</a>
+            <nav class="site-nav" aria-label="{{ i18n "nav_label" }}">
+                <a href="#portfolio">{{ i18n "nav_portfolio" }}</a>
+                <a href="#szolgaltatasok">{{ i18n "nav_services" }}</a>
+                <a href="#eszkoztar">{{ i18n "nav_tools" }}</a>
+                <a href="#kapcsolat">{{ i18n "nav_contact" }}</a>
             </nav>
 
-            <a href="#" class="btn btn--small js-email" data-js-email>Írj nekem</a>
+            {{ $current := .Site.Language.Lang }}
+            {{ $translations := dict }}
+            {{ range .Translations }}
+                {{ $translations = merge $translations (dict .Language.Lang .RelPermalink) }}
+            {{ end }}
+            <div class="lang-switch" role="group" aria-label="{{ i18n "lang_label" }}">
+                {{ range .Sites }}
+                    {{ $lang := .Language.Lang }}
+                    {{ if eq $lang $current }}
+                        <span class="lang-switch__item is-active" aria-current="true">{{ upper $lang }}</span>
+                    {{ else }}
+                        {{ $href := index $translations $lang | default .Home.RelPermalink }}
+                        <a class="lang-switch__item" href="{{ $href }}" hreflang="{{ $lang }}">{{ upper $lang }}</a>
+                    {{ end }}
+                {{ end }}
+            </div>
+
+            <a href="#" class="btn btn--small js-email" data-js-email>{{ i18n "nav_cta" }}</a>
         </div>
     </header>
 
@@ -72,8 +89,8 @@
         <div class="site-footer__inner">
             <p>{{ now.Year }} Underdog Guild</p>
             <p class="site-footer__note">
-                Készült DeepSeekkel és sok kávéval ·
-                <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.hu" target="_blank" rel="noopener noreferrer">
+                {{ i18n "footer_note" }} ·
+                <a href="{{ i18n "license_url" }}" target="_blank" rel="noopener noreferrer">
                     CC0
                 </a>
             </p>

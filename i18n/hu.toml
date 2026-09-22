@@ -1,0 +1,61 @@
+# Header & navigation
+skip_link = "Ugrás a tartalomra"
+logo_tag = "WEBSTÚDIÓ"
+nav_label = "Fő navigáció"
+nav_portfolio = "Portfólió"
+nav_services = "Szolgáltatások"
+nav_tools = "Eszköztár"
+nav_contact = "Kapcsolat"
+nav_cta = "Írj nekem"
+lang_label = "Nyelv"
+footer_note = "Készült DeepSeekkel és sok kávéval"
+license_url = "https://creativecommons.org/publicdomain/zero/1.0/deed.hu"
+og_image_alt = "Underdog Guild – webstúdió logó"
+
+# Hero
+hero_kicker = "WEBFEJLESZTÉS · STATIKUS OLDALAK · HUGO"
+hero_title = "Honlapokat<br>tervezek."
+hero_title_highlight = "Egyedieket."
+hero_lead = "Gyors, akadálymentes és jópofa weboldalak kisvállalkozásoknak és alapítványoknak. Most jelképes áron, mert a portfólió bővítése a célom."
+hero_cta_primary = "Írj nekem"
+hero_cta_secondary = "Nézd meg a munkáimat"
+hero_stamp = "NYITOTT ÚJ PROJEKTEKRE"
+
+# Portfolio
+portfolio_title = "Portfólió"
+portfolio_intro = "Ami eddig elkészült, és ami éppen a műhelyben van."
+
+# Services
+services_title = "Szolgáltatások"
+services_intro = "Egy fős stúdió, teljes odafigyeléssel."
+service_1_title = "Statikus honlap"
+service_1_text = "Villámgyors, egyszerűen karbantartható oldal Hugoval. Pont annyi, amennyire szükséged van, semmi felesleges keretrendszer."
+service_2_title = "Egyedi dizájn"
+service_2_text = "Nem sablonról beszélünk. A te arculatodhoz tervezek, nem a sablonbolt kínálatából válogatok."
+service_3_title = "Akadálymentesség"
+service_3_text = "Billentyűzetről is használható, képernyőolvasókkal is olvasható. A web mindenkié. Ez nálam nem marketingfogás."
+service_4_title = "Karbantartás"
+service_4_text = "Egyszerű adminfelületet adok, hogy magad is tudj frissíteni. Ha mégis elakadsz, ott vagyok."
+
+# Tools
+tools_title = "Eszköztár"
+tools_intro = "Ami a polcon van, és ami éppen úton van."
+tool_learning = "épp tanulom"
+
+# Price
+price_label = "AKCIÓ, AMEDDIG PORTFÓLIÓT ÉPÍTEK"
+price_title = "Jelképes áron<br>dolgozom."
+price_text = "Nem ez lesz az utolsó projektem, és ez az árazás sem örökéletű, de most még tanulom, minden projekttel kicsit tovább jutva."
+price_cta = "Kérj árajánlatot"
+
+# About
+about_title = "Ki ez?"
+about_intro = "Egy ember. Marina. (A fantázianév csak a kedvenc bandámra utalás.)"
+about_p1 = "Kommunikációt és közgazdaságtant tanultam, majd évekig szerveztem a SzimplaCity programjait, aztán vidékre, daruszervizbe sodort az élet."
+about_p2 = "Ma már Hugoval és a jó öreg HTML/CSS-szel építek oldalakat, közben Data Science mesterképzésre járok, és mellé TypeScriptet, meg Reactet tanulok. A következő állomás az MLOps kicsit alaposabban."
+about_p3 = "Nálam nincs marketingnyelv: ha valamit nem tudok, megmondom és utánajárok. Ha valamit megígértem, arra lehet számítani."
+
+# Contact
+contact_title = "Írj nekem"
+contact_intro = "Ötleted van? Csak kérdeznél? Szólj, és megbeszéljük. Ingyen, természetesen."
+contact_note = "Válaszolok, amilyen gyorsan csak tudok."

@@ -1,0 +1,61 @@
+# Header & navigation
+skip_link = "Skip to content"
+logo_tag = "WEB STUDIO"
+nav_label = "Main navigation"
+nav_portfolio = "Portfolio"
+nav_services = "Services"
+nav_tools = "Toolbox"
+nav_contact = "Contact"
+nav_cta = "Get in touch"
+lang_label = "Language"
+footer_note = "Built with DeepSeek and plenty of coffee"
+license_url = "https://creativecommons.org/publicdomain/zero/1.0/"
+og_image_alt = "Underdog Guild – web studio logo"
+
+# Hero
+hero_kicker = "WEB DEVELOPMENT · STATIC SITES · HUGO"
+hero_title = "I build<br>websites."
+hero_title_highlight = "Unique ones."
+hero_lead = "Fast, accessible and playful websites for small businesses and non-profits. At a symbolic price for now, because building my portfolio is the goal."
+hero_cta_primary = "Get in touch"
+hero_cta_secondary = "See my work"
+hero_stamp = "OPEN FOR NEW PROJECTS"
+
+# Portfolio
+portfolio_title = "Portfolio"
+portfolio_intro = "What's finished so far, and what's on the workbench."
+
+# Services
+services_title = "Services"
+services_intro = "A one-person studio with full attention."
+service_1_title = "Static website"
+service_1_text = "Lightning-fast, easy to maintain sites with Hugo. Exactly as much as you need, no unnecessary framework."
+service_2_title = "Custom design"
+service_2_text = "No templates here. I design for your brand, not from a template shop's catalogue."
+service_3_title = "Accessibility"
+service_3_text = "Usable with a keyboard, readable with screen readers. The web is for everyone. That's not a marketing line for me."
+service_4_title = "Maintenance"
+service_4_text = "I set up a simple admin interface so you can update the content yourself. If you get stuck, I'm there."
+
+# Tools
+tools_title = "Toolbox"
+tools_intro = "What's on the shelf, and what's on its way."
+tool_learning = "currently learning"
+
+# Price
+price_label = "DEAL WHILE I BUILD MY PORTFOLIO"
+price_title = "I work for<br>a symbolic price."
+price_text = "This won't be my last project, and this pricing won't last forever, but right now I'm still learning, moving a bit further with every project."
+price_cta = "Ask for a quote"
+
+# About
+about_title = "Who is this?"
+about_intro = "One person. Marina. (The stage name is a nod to my favourite band.)"
+about_p1 = "I studied communication and economics, then spent years organising SzimplaCity's programmes, before life swept me out to the countryside and into a crane repair shop."
+about_p2 = "Today I build sites with Hugo and good old HTML/CSS, while studying Data Science at master's level and learning TypeScript and React on the side. Next stop: MLOps, a bit more thoroughly."
+about_p3 = "No marketing speak here: if I don't know something, I say so and look it up. If I promise something, you can count on it."
+
+# Contact
+contact_title = "Get in touch"
+contact_intro = "Got an idea? Just a question? Say hi and we'll talk it through. Free, of course."
+contact_note = "I reply as fast as I can."
