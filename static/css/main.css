@@ -76,11 +76,14 @@ body {
     line-height: 1.7;
     color: var(--ink);
     background: var(--paper);
+    display: flex;
+    flex-direction: column;
 }
 
 main {
     width: min(100% - 2rem, var(--page-width));
     margin-inline: auto;
+    flex: 1 0 auto;
 }
 
 h1,
