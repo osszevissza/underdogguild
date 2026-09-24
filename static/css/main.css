@@ -1310,3 +1310,213 @@ a {
     margin-top: 3rem;
     padding-bottom: clamp(4rem, 9vw, 7rem);
 }
+
+/* ---------------------------------------------------------
+   WERKBLOG – JOB TICKET CARD
+   The entry list, re-cut as workshop tickets: numbered stub,
+   perforation, tape, barcode. Markup unchanged.
+   --------------------------------------------------------- */
+
+.post-list {
+    --stub-w: clamp(58px, 7vw, 92px);
+}
+
+.post-card {
+    --ticket-code: repeating-linear-gradient(
+        90deg,
+        var(--ink) 0 2px,
+        transparent 2px 4px,
+        var(--ink) 4px 5px,
+        transparent 5px 9px,
+        var(--ink) 9px 12px,
+        transparent 12px 15px
+    );
+
+    position: relative;
+    padding-left: calc(var(--stub-w) + clamp(1.25rem, 3vw, 2.25rem));
+    background:
+        var(--ticket-code) right 1.75rem bottom 1.75rem / 84px 26px no-repeat,
+        repeating-linear-gradient(
+            0deg,
+            rgb(22 19 15 / 0.045) 0 1px,
+            transparent 1px 30px
+        ),
+        var(--card);
+    transform: rotate(-0.5deg);
+}
+
+.post-card:nth-child(even) {
+    transform: rotate(0.45deg);
+}
+
+/* strip of tape */
+.post-card::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: -13px;
+    right: clamp(1.5rem, 12%, 7rem);
+    width: clamp(64px, 8vw, 96px);
+    height: 24px;
+    background: rgb(255 212 0 / 0.75);
+    border-inline: 2px solid rgb(22 19 15 / 0.22);
+    transform: rotate(3.5deg);
+}
+
+/* punched holes sitting on the perforation */
+.post-card::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: calc(var(--stub-w) - 5px);
+    top: -8px;
+    bottom: -8px;
+    width: 18px;
+    background-image:
+        radial-gradient(circle closest-side, var(--paper) 72%, var(--ink) 76% 88%, transparent 90%),
+        radial-gradient(circle closest-side, var(--paper) 72%, var(--ink) 76% 88%, transparent 90%);
+    background-repeat: no-repeat;
+    background-position: center top, center bottom;
+    background-size: 18px 18px;
+    pointer-events: none;
+}
+
+/* the number moves out of the meta row into a tear-off stub */
+.post-card__no {
+    position: absolute;
+    inset: 0 auto 0 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--stub-w);
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    border-right: 2px dashed var(--ink);
+    border-radius: 0;
+    box-shadow: none;
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    line-height: 1;
+    writing-mode: vertical-rl;
+    color: var(--ink);
+    background-color: transparent;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        rgb(22 19 15 / 0.06) 0 8px,
+        transparent 8px 16px
+    );
+    transform: none;
+}
+
+.post-card__title {
+    margin-top: 2rem;
+}
+
+/* one link grabs the whole ticket; keyboard focus mirrors hover */
+.post-card__title a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+}
+
+.post-card__title a,
+.post-card__title a:hover {
+    background-color: transparent;
+    background-image: linear-gradient(var(--toxic), var(--toxic));
+    background-repeat: no-repeat;
+    background-position: 0 88%;
+    background-size: 0% 40%;
+}
+
+.post-card:hover .post-card__title a,
+.post-card:focus-within .post-card__title a {
+    background-size: 100% 40%;
+}
+
+.post-card:hover,
+.post-card:focus-within {
+    transform: rotate(0deg) translate(-4px, -4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* the ticket CTA wears the same green as the one-pager's
+   portfolio buttons, and turns orange on hover just like them */
+.post-card .btn {
+    background: var(--toxic);
+}
+
+.post-card:hover .btn,
+.post-card:focus-within .btn {
+    background: var(--orange);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .post-card,
+    .post-card__title a {
+        transition:
+            transform 150ms ease,
+            box-shadow 150ms ease,
+            background-color 150ms ease,
+            background-size 180ms ease;
+    }
+}
+
+/* narrow screens: the stub turns into a band across the top */
+@media (max-width: 620px) {
+    .post-card {
+        padding-top: calc(clamp(1.5rem, 3.5vw, 2.5rem) + 3.1rem);
+        padding-left: clamp(1.5rem, 3.5vw, 2.5rem);
+        background:
+            repeating-linear-gradient(
+                0deg,
+                rgb(22 19 15 / 0.045) 0 1px,
+                transparent 1px 30px
+            ),
+            var(--card);
+    }
+
+    .post-card__no {
+        inset: 0 0 auto 0;
+        width: auto;
+        height: 3.1rem;
+        justify-content: flex-start;
+        padding-left: clamp(1rem, 4vw, 1.5rem);
+        border-right: 0;
+        border-bottom: 2px dashed var(--ink);
+        font-size: 1.7rem;
+        writing-mode: horizontal-tb;
+    }
+
+    .post-card::after {
+        left: -8px;
+        right: -8px;
+        top: calc(3.1rem - 9px);
+        bottom: auto;
+        width: auto;
+        height: 18px;
+        background-position: left center, right center;
+    }
+}
+
+/* ---------------------------------------------------------
+   WERKBLOG – HERO GLOW
+   A warm corner in the top right of the blog hero. The
+   hatch of the shared .hero rule is re-declared underneath,
+   because background-image replaces the whole layer list.
+   --------------------------------------------------------- */
+
+.werkblog-hero {
+    background-image:
+        radial-gradient(
+            115% 90% at 84% 2%,
+            rgb(255 92 26 / 0.12),
+            transparent 62%
+        ),
+        repeating-linear-gradient(
+            45deg,
+            rgb(22 19 15 / 0.035) 0 2px,
+            transparent 2px 14px
+        );
+}
