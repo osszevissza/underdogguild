@@ -2,6 +2,10 @@ baseURL = "https://barsimarina.hu/"
 defaultContentLanguage = "hu"
 title = "Underdog Guild"
 
+# Nincs tag/category a tartalomban, és nincs hozzá layout sem, így a Hugo
+# minden taxonómia-oldalra warningot dob. Ez kikapcsolja őket.
+disableKinds = ["taxonomy", "term"]
+
 [markup.goldmark.renderer]
 unsafe = true
 hardWraps = true
