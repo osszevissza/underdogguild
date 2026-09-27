@@ -594,6 +594,13 @@ a {
 
 .project-card p {
     margin-top: 1.25rem;
+    /* the card is a flex column with align-items:flex-start, so paragraphs
+       shrink-wrap. For a paragraph holding an image that is circular: the
+       image is 100% of the paragraph, the paragraph is as wide as the image.
+       Until the file loads its intrinsic width is unknown, so the card
+       started ~11px wide and jumped to 460px — shifting the footer down as
+       you scrolled to it. Full width breaks the cycle. */
+    width: 100%;
     max-width: 62ch;
 }
 
@@ -604,6 +611,11 @@ a {
 
 .project-card img {
     width: 100%;
+    /* height must be auto or the img element's height="" attribute wins and
+       the aspect-ratio below is ignored (it only applies when one axis is auto).
+       With height auto the attributes still reserve the right space before the
+       image loads, so the page no longer grows as you scroll. */
+    height: auto;
     aspect-ratio: 16 / 9;
     margin-top: 1.5rem;
     border: var(--border);

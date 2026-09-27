@@ -34,6 +34,8 @@ Az oldalhoz egyszerű adminfelület is készült, így az átadás óta (2026. m
     src="/img/pajka.webp"
     alt="Aiki Dent fogorvosi rendelő"
     class="project-image"
+    width="631"
+    height="946"
     loading="lazy">
 
 Egy magánrendelő modern, letisztult weboldala készül.
@@ -53,6 +55,8 @@ Várható befejezés: 2026. december.
     src="/img/pajka2.webp"
     alt="Reménység Gyülekezete"
     class="project-image"
+    width="1200"
+    height="900"
     loading="lazy">
 
 Egy tatabányai vallási gyülekezet weboldala, megkeresésre.

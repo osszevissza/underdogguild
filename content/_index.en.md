@@ -34,6 +34,8 @@ The site also got a simple admin interface, so since handover (May 2026) the par
     src="/img/pajka.webp"
     alt="Aiki Dent dental practice"
     class="project-image"
+    width="631"
+    height="946"
     loading="lazy">
 
 A modern, clean website for a private practice is in the works.
@@ -53,6 +55,8 @@ Expected completion: December 2026.
     src="/img/pajka2.webp"
     alt="Reménység Gyülekezete"
     class="project-image"
+    width="1200"
+    height="900"
     loading="lazy">
 
 A website for a religious congregation in Tatabánya, on request.
