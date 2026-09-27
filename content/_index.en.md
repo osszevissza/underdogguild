@@ -37,7 +37,26 @@ The site also got a simple admin interface, so since handover (May 2026) the par
     loading="lazy">
 
 A modern, clean website for a private practice is in the works.
-Expected completion: September 2026.
+Expected completion: December 2026.
+
+</article>
+
+<article class="project-card project-card--upcoming">
+
+<span class="stamp stamp--wip">UNDER CONSTRUCTION</span>
+
+### Reménység Gyülekezete
+
+*Hugo, LMM model*
+
+<img
+    src="/img/pajka2.webp"
+    alt="Reménység Gyülekezete"
+    class="project-image"
+    loading="lazy">
+
+A website for a religious congregation in Tatabánya, on request.
+Expected completion: waiting for photos :)
 
 </article>
 

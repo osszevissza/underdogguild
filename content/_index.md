@@ -37,7 +37,26 @@ Az oldalhoz egyszerű adminfelület is készült, így az átadás óta (2026. m
     loading="lazy">
 
 Egy magánrendelő modern, letisztult weboldala készül.
-Várható befejezés: 2026. szeptember.
+Várható befejezés: 2026. december.
+
+</article>
+
+<article class="project-card project-card--upcoming">
+
+<span class="stamp stamp--wip">ÉPÍTÉS ALATT</span>
+
+### Reménység Gyülekezete
+
+*Hugo, LMM modell*
+
+<img
+    src="/img/pajka2.webp"
+    alt="Reménység Gyülekezete"
+    class="project-image"
+    loading="lazy">
+
+Egy tatabányai vallási gyülekezet weboldala, megkeresésre.
+Várható befejezés: képekre várok :)
 
 </article>
 
