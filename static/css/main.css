@@ -1477,6 +1477,27 @@ a {
     padding-inline: 0.75rem;
 }
 
+@media (max-width: 620px) {
+    /* the labels stay visible on small screens, but the bar tightens so the
+       three buttons hold one row and the dialog keeps its height for the
+       image instead of scrolling to reach them */
+    .lightbox__bar {
+        gap: 0.5rem;
+        padding: 0.7rem 0.75rem;
+    }
+
+    .lightbox__caption {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+
+    .lightbox__bar .btn {
+        padding-inline: 0.6rem;
+        letter-spacing: 0;
+        font-size: 0.75rem;
+    }
+}
+
 .lightbox__bar {
     display: flex;
     flex-wrap: wrap;
