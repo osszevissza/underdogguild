@@ -47,7 +47,7 @@ Várható befejezés: 2026. december.
 
 ### Reménység Gyülekezete
 
-*Hugo, LMM modell*
+*Hugo, LLM*
 
 <img
     src="/img/pajka2.webp"
