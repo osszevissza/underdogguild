@@ -96,6 +96,20 @@ h3 {
     text-wrap: balance;
 }
 
+/* Blog pages only. SpartanMB caps are 0.75em tall, so 1.05 leaves just a
+   0.30em gap between lines of uppercase — cramped on the long, wrapping
+   headings the blog uses. 1.2 gives a 0.45em gap, mid-range for all-caps
+   display type. Scoped to .post (single) and .werkblog (list) so the
+   homepage hero and section headings keep their tighter setting. */
+.post h1,
+.post h2,
+.post h3,
+.werkblog h1,
+.werkblog h2,
+.werkblog h3 {
+    line-height: 1.2;
+}
+
 p {
     color: var(--ink-soft);
 }
@@ -1189,9 +1203,20 @@ a {
 }
 
 .post-content {
-    max-width: 70ch;
+    /* The box itself spans the page so media can break out into the empty
+       column beside the text; the prose is capped instead, just below. */
+    max-width: none;
     margin-top: 2.5rem;
     overflow-wrap: break-word;
+}
+
+/* 39rem = 624px is the widest that still holds <=80 characters per line
+   (WCAG 1.4.8): measured 78.9 for Hungarian and 79.5 for English. Sizing
+   this in ch would lie — 1ch is the width of "0" (0.582em), which is wider
+   than an average glyph (~0.49em), so the old 70ch was really holding 82.4
+   characters. Media blocks opt out of this cap further down. */
+.post-content > * {
+    max-width: 39rem;
 }
 
 .post-content > * + * {
@@ -1304,6 +1329,172 @@ a {
 .post-content td {
     padding: 0.5rem 0.75rem;
     border: 2px solid var(--ink);
+}
+
+/* ---------------------------------------------------------
+   WERKBLOG – POST FIGURES & GALLERY
+   Gallery items are small thumbnails: the whole screenshot is
+   scaled down, never cropped and never squashed, so the aspect
+   ratio always survives. Each one is a real link to the file,
+   so it still works without JS; with JS it opens in the native
+   <dialog> below instead, which brings focus trapping,
+   Esc-to-close and focus restoration for free.
+   --------------------------------------------------------- */
+
+.post-figure {
+    margin: 2rem 0 0;
+}
+
+/* the Nemezis shot is a small inset, not a banner: capped by
+   max-width only, so the height follows the intrinsic ratio */
+.post-figure a {
+    display: inline-block;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.post-figure a:hover {
+    background: none;
+}
+
+.post-figure img {
+    width: auto;
+    height: auto;
+    max-width: min(100%, 20rem);
+}
+
+.post-content .post-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* breaks out past the 39rem prose measure into the empty column to the
+       right, bounded by the page so it can never outgrow the layout.
+       Beats `.post-content > *` on specificity (0,2,0 vs 0,1,0). */
+    max-width: 64rem;
+    gap: clamp(0.9rem, 2.5vw, 1.35rem);
+    margin-top: 2.5rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+.post-content .post-gallery li {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+.post-content .post-gallery figure {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* the thumbnail is the link: kill the inline-link underline */
+.post-content .post-gallery a {
+    display: block;
+    flex: 0 0 auto;
+    padding-bottom: 0;
+    border: var(--border);
+    box-shadow: 4px 4px 0 var(--ink);
+    background: var(--card);
+    cursor: zoom-in;
+}
+
+.post-content .post-gallery a:hover,
+.post-content .post-gallery a:focus-visible {
+    background: var(--card);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+}
+
+/* flex: 0 0 auto so a flex parent can never squash the ratio */
+.post-content .post-gallery img {
+    width: 100%;
+    height: auto;
+    flex: 0 0 auto;
+    border: 0;
+    box-shadow: none;
+}
+
+.post-content .post-gallery figcaption {
+    margin-top: auto;
+    padding-top: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+}
+
+@media (min-width: 621px) {
+    .post-content .post-gallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* ---------------------------------------------------------
+   WERKBLOG – LIGHTBOX
+   Native <dialog>: the top layer, inert background, focus
+   trapping and Esc come from the browser, not from script.
+   --------------------------------------------------------- */
+
+.lightbox {
+    max-width: 94vw;
+    /* vh is the *large* viewport on mobile, so with the URL bar
+       showing the dialog could run past the bottom of the screen and
+       take the arrows and Close with it. dvh tracks what is actually
+       visible; the vh line stays as the fallback. */
+    max-height: 94vh;
+    max-height: 94dvh;
+    margin: auto;
+    padding: 0;
+    border: var(--border);
+    background: var(--card);
+    box-shadow: var(--shadow);
+    overflow: auto;
+}
+
+.lightbox::backdrop {
+    background: rgba(22, 19, 15, 0.85);
+}
+
+.lightbox .lightbox__img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(90vw, 1400px);
+    max-height: 80vh;
+    max-height: 80dvh;
+    margin: 0 auto;
+    border: 0;
+    box-shadow: none;
+}
+
+/* `.btn` sets display:inline-flex, which outranks the UA `[hidden]`
+   rule — so hiding the arrows on a single image needs saying out loud */
+.lightbox [hidden] {
+    display: none;
+}
+
+.lightbox__nav {
+    padding-inline: 0.75rem;
+}
+
+.lightbox__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem 1rem;
+    padding: 0.85rem 1rem;
+    border-top: var(--border);
+}
+
+.lightbox__caption {
+    margin-right: auto;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+
+.lightbox__caption:empty {
+    display: none;
 }
 
 .post-footer {

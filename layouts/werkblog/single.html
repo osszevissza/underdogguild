@@ -10,6 +10,21 @@
 
     <div class="post-content">{{ .Content }}</div>
 
+    <dialog class="lightbox" data-lightbox tabindex="-1" aria-label="{{ i18n "lightbox_label" }}">
+        <img class="lightbox__img" data-lightbox-img alt="">
+        <div class="lightbox__bar">
+            <p class="lightbox__caption" data-lightbox-caption aria-hidden="true"></p>
+            <p class="visually-hidden" role="status" data-lightbox-status></p>
+            <button type="button" class="btn btn--small lightbox__nav" data-lightbox-prev aria-label="{{ i18n "lightbox_prev" }}">
+                <span aria-hidden="true">←</span>
+            </button>
+            <button type="button" class="btn btn--small lightbox__nav" data-lightbox-next aria-label="{{ i18n "lightbox_next" }}">
+                <span aria-hidden="true">→</span>
+            </button>
+            <button type="button" class="btn btn--small" data-lightbox-close>{{ i18n "lightbox_close" }}</button>
+        </div>
+    </dialog>
+
     <footer class="post-footer">
         <a class="btn" href="{{ .Parent.RelPermalink }}">← {{ i18n "back_to_werk" }}</a>
     </footer>

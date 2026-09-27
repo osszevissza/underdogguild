@@ -31,7 +31,8 @@
     <meta name="twitter:description" content="{{ .Site.Params.description }}">
     <meta name="twitter:image" content="{{ "img/og.png" | absURL }}">
 
-    <link rel="stylesheet" href="/css/main.css">
+    {{ $css := os.Stat "static/css/main.css" }}
+    <link rel="stylesheet" href="/css/main.css?v={{ $css.ModTime.Unix }}">
     <link rel="stylesheet" href="{{ "/fonts/SpartanMB/SpartanMB-Regular.css" | relURL }}">
     <link rel="stylesheet" href="{{ "/fonts/GeneralSans/GeneralSans.css" | relURL }}">
 </head>
@@ -97,8 +98,12 @@
         </div>
     </footer>
 
-<script src="{{ "/js/header.js" | relURL }}"></script>
-<script src="{{ "/js/email.js" | relURL }}"></script>
+{{ $jsHeader := os.Stat "static/js/header.js" }}
+{{ $jsEmail := os.Stat "static/js/email.js" }}
+{{ $jsLightbox := os.Stat "static/js/lightbox.js" }}
+<script src="{{ "/js/header.js" | relURL }}?v={{ $jsHeader.ModTime.Unix }}"></script>
+<script src="{{ "/js/email.js" | relURL }}?v={{ $jsEmail.ModTime.Unix }}"></script>
+<script src="{{ "/js/lightbox.js" | relURL }}?v={{ $jsLightbox.ModTime.Unix }}"></script>
 <script data-goatcounter="https://underdog.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body>
