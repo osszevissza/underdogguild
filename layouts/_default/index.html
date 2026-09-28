@@ -7,7 +7,7 @@
         <p class="hero__lead">{{ i18n "hero_lead" }}</p>
         <div class="hero__actions">
             <a href="#" class="btn btn--primary js-email" data-js-email>{{ i18n "hero_cta_primary" }}</a>
-            <a href="#portfolio" class="btn">{{ i18n "hero_cta_secondary" }}</a>
+            {{ with .Site.GetPage "/werkblog" }}<a href="{{ .RelPermalink }}" class="btn">{{ .Title }}</a>{{ end }}
         </div>
         <p class="hero__stamp" aria-hidden="true">{{ i18n "hero_stamp" }}</p>
     </header>
