@@ -86,8 +86,6 @@ Overall — especially if you don't look under the bonnet — I'm proud of the s
 
 And now the menu. I hadn't planned a separate section for it, but it ended up longer than the project itself :)
 
-Why doesn't the Különös Klub site have the menu in the header (or a hamburger on mobile), when everyone puts it there?
-
 Both the exam project and Underdog Guild are hobby sites. I don't get thousands of visitors — honestly, not even 100 :) — I have no A/B tests, and not too many clients I have to explain my decisions to. That's the freedom of the Underdog Guild: I can get away with not using the usual cookie-cutter template.
 
 When I started putting my exam project together, once I got to the structure I tried to pick a style — what kind of hamburger menu to have on mobile, like I see everywhere, just a bit more original. But a friend of mine vetoed it straight away: preferably none at all :)

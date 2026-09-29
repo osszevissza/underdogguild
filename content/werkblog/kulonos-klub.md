@@ -85,8 +85,6 @@ Kedves barátom említette a statikus oldalgenerátorokat - de nem tudtam pontos
 
 Nos, a menü. Nem terveztem külön fejezetet neki, de végül hosszabb lett, mint maga a projekt bemutatása :)
 
-A Különös Klub oldalon miért nincs fejlécben a menü (se mobilon hamburger), amikor mindenki oda teszi?
-
 A vizsgamunka és az Underdog Guild is hobbioldal. Nincs ezres látogatottságom - igazából 100 se :) - nincs A/B tesztem, nincs túl sok ügyfelem, akinek meg kell magyarázni a döntéseimet. Ez az underdog guild szabadsága: megtehetem, hogy nem a megszokott sablont használom.
 
 Amikor elkezdtem összerakni a vizsgaprojektemet, a struktúrához érve próbáltam kiválasztani a stílust, milyen hamburger menü legyen mobilon, ahogy mindenhol látom, csak kicsit egyedibben. De egy barátom rögtön vétózta, hogy leginkább semmilyen :)
