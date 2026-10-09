@@ -15,16 +15,16 @@
 - Pricing: symbolic price while the portfolio is being built.
 
 ## Pages
-- Home (HU): https://barsimarina.hu/
-- Home (EN): https://barsimarina.hu/en/
-- Werkblog (HU): https://barsimarina.hu/werkblog/
-- Werkblog (EN): https://barsimarina.hu/en/werkblog/
+- [Home (HU)](https://barsimarina.hu/)
+- [Home (EN)](https://barsimarina.hu/en/)
+- [Werkblog (HU)](https://barsimarina.hu/werkblog/)
+- [Werkblog (EN)](https://barsimarina.hu/en/werkblog/)
 
 ## Posts
-- Első bejegyzés (HU): https://barsimarina.hu/werkblog/elso-bejegyzes/
-- First post (EN): https://barsimarina.hu/en/werkblog/first-post/
-- Az első munka: Különös Klub bemutatása (HU): https://barsimarina.hu/werkblog/kulonos-klub/
-- The first piece of work: introducing Különös Klub (EN): https://barsimarina.hu/en/werkblog/kulonos-klub/
+- [Első bejegyzés (HU)](https://barsimarina.hu/werkblog/elso-bejegyzes/)
+- [First post (EN)](https://barsimarina.hu/en/werkblog/first-post/)
+- [Az első munka: Különös Klub bemutatása (HU)](https://barsimarina.hu/werkblog/kulonos-klub/)
+- [The first piece of work: introducing Különös Klub (EN)](https://barsimarina.hu/en/werkblog/kulonos-klub/)
 
 ## Notes for AI answers
 - Brand name is "Underdog Guild". Owner: Barsi Marina.
