@@ -5,31 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
-    <meta name="description" content="{{ .Site.Params.description }}">
+    {{- $desc := .Site.Params.description }}
+    {{- if .Description }}
+    {{- $desc = .Description }}
+    {{- else if and .IsPage .Summary }}
+    {{- $desc = (.Summary | plainify | truncate 160) }}
+    {{- end }}
+    <meta name="description" content="{{ $desc }}">
     <meta name="author" content="Underdog Guild">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#f2ede1">
     <link rel="canonical" href="{{ .Permalink }}">
 
+    {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+    {{ end }}{{ $xDefault := .Permalink }}{{ range where .AllTranslations "Language.Lang" "hu" }}{{ $xDefault = .Permalink }}{{ end }}<link rel="alternate" hreflang="x-default" href="{{ $xDefault }}">
+
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-    <meta property="og:type" content="website">
+    {{- $seoTitle := .Site.Title }}
+    {{- if not .IsHome }}
+    {{- $seoTitle = printf "%s – %s" .Title .Site.Title }}
+    {{- end }}
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:site_name" content="Underdog Guild">
     <meta property="og:locale" content="{{ .Site.Params.ogLocale }}">
-    <meta property="og:title" content="{{ .Title }}">
-    <meta property="og:description" content="{{ .Site.Params.description }}">
+    {{ range .Sites }}{{ if ne .Language.Lang $.Site.Language.Lang }}<meta property="og:locale:alternate" content="{{ .Language.Params.ogLocale }}">
+    {{ end }}{{ end }}<meta property="og:title" content="{{ $seoTitle }}">
+    <meta property="og:description" content="{{ $desc }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ "img/og.png" | absURL }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="{{ i18n "og_image_alt" }}">
+    {{- if .IsPage }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+    <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ .Title }}">
-    <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    <meta name="twitter:title" content="{{ $seoTitle }}">
+    <meta name="twitter:description" content="{{ $desc }}">
     <meta name="twitter:image" content="{{ "img/og.png" | absURL }}">
+
+    {{- partial "seo-jsonld.html" . }}
 
     {{ $css := os.Stat "static/css/main.css" }}
     <link rel="stylesheet" href="/css/main.css?v={{ $css.ModTime.Unix }}">

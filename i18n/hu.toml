@@ -73,3 +73,9 @@ lightbox_prev = "Előző kép"
 lightbox_next = "Következő kép"
 lightbox_prev_label = "Előző"
 lightbox_next_label = "Következő"
+
+# 404
+notfound_kicker = "404 · ELTÉVEDTÉL"
+notfound_title = "Itt nincs semmi."
+notfound_text = "Ez az oldal nem létezik (már). Nézz körül a főoldalon vagy a Werkblogon."
+notfound_home = "Vissza a főoldalra"

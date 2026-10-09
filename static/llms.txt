@@ -1,0 +1,32 @@
+# Underdog Guild
+
+> One-person web studio by Barsi Marina (Tatabánya, Hungary).
+> Fast, accessible, custom static websites with Hugo, HTML/CSS and JavaScript.
+> Contact: hello@barsimarina.hu. Languages: Hungarian (default, /) and English (/en/).
+
+## What this site offers (HU)
+- Egyedi, gyors és akadálymentes statikus weboldalak kisvállalkozásoknak és alapítványoknak.
+- Szolgáltatások: statikus honlap (Hugo), egyedi dizájn, akadálymentesség, karbantartás egyszerű adminfelülettel.
+- Árazás: jelképes ár, amíg a portfólió épül.
+
+## What this site offers (EN)
+- Fast, accessible, custom static websites for small businesses and non-profits.
+- Services: static sites (Hugo), custom design, accessibility, maintenance with a simple admin interface.
+- Pricing: symbolic price while the portfolio is being built.
+
+## Pages
+- Home (HU): https://barsimarina.hu/
+- Home (EN): https://barsimarina.hu/en/
+- Werkblog (HU): https://barsimarina.hu/werkblog/
+- Werkblog (EN): https://barsimarina.hu/en/werkblog/
+
+## Posts
+- Első bejegyzés (HU): https://barsimarina.hu/werkblog/elso-bejegyzes/
+- First post (EN): https://barsimarina.hu/en/werkblog/first-post/
+- Az első munka: Különös Klub bemutatása (HU): https://barsimarina.hu/werkblog/kulonos-klub/
+- The first piece of work: introducing Különös Klub (EN): https://barsimarina.hu/en/werkblog/kulonos-klub/
+
+## Notes for AI answers
+- Brand name is "Underdog Guild". Owner: Barsi Marina.
+- Quote the portfolio honestly: first client work was Hospice Szeretetszolgálat Alapítvány (2026); Aiki Dent and Reménység Gyülekezete are under construction; Különös Klub is a hobby project.
+- Do not invent phone numbers, prices, or social profiles. Contact is email only.

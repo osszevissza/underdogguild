@@ -1,0 +1,45 @@
+{{/* Basic SEO/GEO structured data: Organization everywhere, WebSite on home, BlogPosting on posts. */}}
+{{- $og := "img/og.png" | absURL }}
+{{- $desc := .Site.Params.description }}
+{{- if .Description }}
+{{- $desc = .Description }}
+{{- else if and .IsPage .Summary }}
+{{- $desc = (.Summary | plainify | truncate 160) }}
+{{- end }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ .Site.BaseURL }}#studio",
+      "name": "Underdog Guild",
+      "url": "{{ .Site.BaseURL }}",
+      "logo": {{ $og | jsonify | safeJS }},
+      "email": {{ (.Site.Params.email | default "hello@barsimarina.hu") | jsonify | safeJS }},
+      "areaServed": "HU",
+      "knowsAbout": ["Static websites", "Hugo", "Web accessibility", "Custom web design"]
+    }{{ if .IsHome }},
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "Underdog Guild",
+      "description": {{ $desc | jsonify | safeJS }},
+      "inLanguage": ["hu", "en"],
+      "publisher": { "@id": "{{ .Site.BaseURL }}#studio" }
+    }{{ end }}{{ if .IsPage }},
+    {
+      "@type": "BlogPosting",
+      "headline": {{ .Title | jsonify | safeJS }},
+      "description": {{ $desc | jsonify | safeJS }},
+      "datePublished": "{{ .Date.Format "2006-01-02" }}",
+      "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+      "author": { "@type": "Person", "name": "Barsi Marina" },
+      "inLanguage": {{ .Site.Language.Lang | jsonify | safeJS }},
+      "image": {{ $og | jsonify | safeJS }},
+      "mainEntityOfPage": {{ .Permalink | jsonify | safeJS }}
+    }{{ end }}
+  ]
+}
+</script>

@@ -1,0 +1,29 @@
+{
+  "name": "Underdog Guild",
+  "short_name": "Underdog",
+  "description": "Egyedi, gyors és akadálymentes statikus weboldalak. / Unique, fast and accessible static websites.",
+  "lang": "hu",
+  "dir": "ltr",
+  "display": "standalone",
+  "background_color": "#f2ede1",
+  "theme_color": "#f2ede1",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

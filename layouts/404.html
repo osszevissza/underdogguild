@@ -1,0 +1,28 @@
+{{ define "title" }}404 – {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<article>
+    <header class="hero">
+        <p class="hero__kicker">{{ i18n "notfound_kicker" }}</p>
+        <h1 class="hero__title">{{ i18n "notfound_title" }}</h1>
+        <p class="hero__lead">{{ i18n "notfound_text" }}</p>
+        <div class="hero__actions">
+            <a href="{{ .Site.Home.RelPermalink }}" class="btn btn--primary">{{ i18n "notfound_home" }}</a>
+            {{ with .Site.GetPage "/werkblog" }}<a href="{{ .RelPermalink }}" class="btn">{{ .Title }}</a>{{ end }}
+        </div>
+    </header>
+
+    {{/* Single 404.html renders in the default language; hardcode the other language below. */}}
+    {{ if eq .Site.Language.Lang "hu" }}
+    <section class="section" lang="en">
+        <p class="section-intro">This page doesn't exist (anymore). Have a look at the homepage or the Werkblog.</p>
+        <p><a href="/en/" class="btn">Back to homepage</a></p>
+    </section>
+    {{ else }}
+    <section class="section" lang="hu">
+        <p class="section-intro">Ez az oldal nem létezik (már). Nézz körül a főoldalon vagy a Werkblogon.</p>
+        <p><a href="/" class="btn">Vissza a főoldalra</a></p>
+    </section>
+    {{ end }}
+</article>
+{{ end }}

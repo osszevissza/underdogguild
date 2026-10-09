@@ -73,3 +73,9 @@ lightbox_prev = "Previous image"
 lightbox_next = "Next image"
 lightbox_prev_label = "Previous"
 lightbox_next_label = "Next"
+
+# 404
+notfound_kicker = "404 · YOU GOT LOST"
+notfound_title = "Nothing here."
+notfound_text = "This page doesn't exist (anymore). Have a look at the homepage or the Werkblog."
+notfound_home = "Back to homepage"
